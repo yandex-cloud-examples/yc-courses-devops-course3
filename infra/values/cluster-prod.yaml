@@ -1,0 +1,11 @@
+clusterName: "prod"
+clusterVersion: "1.21"
+clusterZone: "ru-central1-b"
+clusterIpv4Range: "10.113.0.0/16"
+serviceIpv4Range: "10.97.0.0/16"
+nodeCount: 1
+nodeDiskSize: 64
+nodeMem: 2
+nodeCores: 2
+securityGroup: prod-security-group
+nodeSubnet: default-ru-central1-b

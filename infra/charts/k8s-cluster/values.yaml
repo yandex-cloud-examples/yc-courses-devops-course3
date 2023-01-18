@@ -1,0 +1,14 @@
+clusterName:
+clusterVersion: "1.21"
+clusterZone: "ru-central1-b"
+clusterIpv4Range:
+serviceIpv4Range:
+nodeCount: 1
+nodeDiskSize: 64
+nodeMem: 2
+nodeCores: 2
+securityGroup:
+nodeSubnet:
+
+autoscaling:
+  enabled: false

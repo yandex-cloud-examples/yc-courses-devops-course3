@@ -1,0 +1,13 @@
+postgresName:
+postgresZone: "ru-central1-b"
+postgresVersion: "14"
+infraNamespace: "infrastructure"
+securityGroup:
+
+dbUser:
+dbPassword:
+dbName:
+
+diskSize: 10
+resourcePresetId: "b2.micro"
+diskTypeId: "network-hdd"
