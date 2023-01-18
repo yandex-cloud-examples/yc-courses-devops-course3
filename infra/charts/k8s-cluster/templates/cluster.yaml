@@ -1,0 +1,26 @@
+apiVersion: kubernetes.yandex-cloud.jet.crossplane.io/v1alpha1
+kind: Cluster
+metadata:
+  name: {{ include "clusterFullName" . }}
+spec:
+  forProvider:
+    name: {{ include "clusterFullName" . }}
+    master:
+      - zonal:
+          - zone: {{ .Values.clusterZone }}
+        publicIp: true
+        version: "{{ .Values.clusterVersion }}"
+        securityGroupIdsRefs:
+          - name: {{ .Values.securityGroup }}
+    nodeServiceAccountIdRef:
+      name: {{ include "clusterFullName" . }}
+    networkIdRef:
+      name: default
+    serviceAccountIdRef:
+      name: {{ include "clusterFullName" . }}
+    folderIdRef:
+      name: default
+    releaseChannel: RAPID
+    clusterIpv4Range: {{ .Values.clusterIpv4Range }}
+    serviceIpv4Range: {{ .Values.serviceIpv4Range }}
+    
